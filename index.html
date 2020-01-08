@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+
+<head>
+
+  <meta charset="UTF-8">
+  <link rel="stylesheet" type="text/css" href="style.css">
+
+
+  <script src="https://www.gstatic.com/firebasejs/7.6.1/firebase-app.js"></script>
+
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-app.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/6.0.4/firebase-database.js"></script>
+</head> 
+
+
+
+<body>
+	
+	<div class="container">
+		<div class="jumbotron text-center">
+			<h1>Train Schedule and Times</h1>
+			<hr>
+			
+		</div>
+		
+		<div class="row">
+			<div class="col lg-8 md-8 sm-8">
+				<div class="panel panel-primary">
+					<div class="panel-heading">
+						<h3 class="panel-title">Train Schedule</h3>
+					</div>
+						<div class="panel-body">
+						<table class="table table-hover table-responsive" id="trainTable">
+						<thead>
+							<tr>
+								<th class="tN">Train Name</th>
+								<th class="d">Destination</th>
+								<th class="f">Frequency (min)</th>
+								<th class="nA">Next Arrival</th>
+								<th class="mA">Minutes Away</th>
+							</tr>
+						</thead>
+						<tbody id="trainTable">
+							<tr></tr>
+						</tbody>
+						</table>
+						</div> 
+				</div> 
+			</div>
+
+			<div class="col-md-4 sm-4">
+					<div class="panel panel-primary">
+						<div class="panel-heading">
+							<h3 class="panel-title">Add Train</h3>
+						</div>
+							<div class="panel-body">
+								<form>
+									<div class="form-group">
+									<label for="name">Train Name</label>
+									<input type="text" class="form-control" id="nameInput" placeholder="Train">
+								</div>
+								<div class="form-group">
+									<label for="dest">Destination </label>
+									<input type="text" class="form-control" id="destInput" placeholder="Place">
+								</div>
+								<div class="form-group">
+									<label class="nextTrain" for="nextTrain">First Train Time</label><label class="milTime">&nbsp;(HH:mm - Military)</label>
+									<input type="" class="form-control" id="timeInput" placeholder="00:00">
+								</div>
+								<div class="form-group">
+									<label for="minsAway">Frequency in Mins</label>
+									<input type="text" class="form-control" id="freqInput" placeholder="15">
+								</div>
+		
+								<!-- <button type="submit" class="btn btn-success" id="submit">Add Train</button> -->
+                                <button type="button" class="block">Submit!</button>
+								
+							</form>
+							</div>
+					</div>
+	
+		</div>
+		
+		<div class="row">
+			
+		</div>
+
+	</div>	
+	<!-- JavaScript -->
+			<script src="app.js"></script>
+</body>
+</html>
